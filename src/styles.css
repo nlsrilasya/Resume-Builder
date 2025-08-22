@@ -1,0 +1,163 @@
+/* ===== Website Name (Top Left Corner) ===== */
+/* ===== Website Name (Top Left Corner) ===== */
+.website-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #004080; /* Deep Blue for a Professional Look */
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Add Space Below Header */
+.header-space {
+  height: 60px; /* Adjust as Needed */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background: #333;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.resume-form input,
+.templates button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.resume-preview {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Simple Template */
+.simple-template {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.simple-template h1 {
+  font-size: 22px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.simple-template p {
+  text-align: left;
+}
+
+.modern-template {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Traditional Template */
+.traditional-template {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.traditional-template h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.traditional-template p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.traditional-template h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 15px;
+  color: #222;
+}
+
+.traditional-template ul {
+  padding-left: 20px;
+}
+
+.traditional-template li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.download-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  margin: 20px auto;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
