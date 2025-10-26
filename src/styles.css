@@ -1,163 +1,352 @@
-/* ===== Website Name (Top Left Corner) ===== */
 
-.website-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  background-color: #004080; /* Deep Blue for a Professional Look */
-  padding: 10px 20px;
-  border-radius: 5px;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Add Space Below Header */
-.header-space {
-  height: 60px; /* Adjust as Needed */
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f5f7fa;
+  color: #111;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
 }
+
+/* ===============================
+   ⚡ MODERN SIDEBAR STYLING
+================================== */
 
 .sidebar {
-  width: 250px;
-  background: #333;
-  color: white;
-  height: 100vh;
-  padding: 20px;
+  background: linear-gradient(180deg, #182953 0%, #182953 100%);
+  color: #f9fafb;
+  padding: 24px 20px;
+  width: 200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Sidebar Header (Actual visible title, not ::before) */
+.sidebar h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.8px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Optional small emoji or icon next to title */
+.sidebar h1::before {
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* Sidebar Navigation */
 .sidebar ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 0;
 }
 
-.sidebar ul li {
+/* Navigation Buttons */
+.sidebar button {
+  background: rgba(30, 41, 59, 0.7);
+  color: #e5e7eb;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: left;
   cursor: pointer;
-  padding: 10px;
-  border-bottom: 1px solid #555;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hover Effect */
+.sidebar button:hover {
+  background: #2258cd;
+  color: #fff;
+  transform: translateX(3px);
+  border-color: #2258cd;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Active/Focus */
+.sidebar button:focus,
+.sidebar button:active {
+  outline: none;
+  background: #0c3fad;
+  color: #fff;
+}
+
+/* Reset Button */
+.sidebar button:last-child {
+  background: #0c3fad;
+  color: white;
+  border: 1px solid #0c3fad;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.sidebar button:last-child:hover {
+  background: #0c3fad;
+  color: #fff;
 }
 
 .content {
-  flex-grow: 1;
-  padding: 20px;
+  padding: 32px;
+  background: #f9fafb;
+}
+
+body {
+  background-color: #fffaf5;
+  color: #1e293b;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Wrapper centers the form */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Main form container */
+.resume-form {
+  background: #ffffff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 170, 120, 0.2);
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Title */
+.resume-form h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
   text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Label & Inputs */
+.resume-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  font-weight: 500;
 }
 
 .resume-form input,
-.templates button {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.resume-preview {
-  width: 60%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
-  font-family: Arial, sans-serif;
+.resume-form textarea {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #fffaf5;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Simple Template */
-.simple-template {
-  font-family: Arial, sans-serif;
-  width: 60%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background: #f9f9f9;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+/* On focus */
+.resume-form input:focus,
+.resume-form textarea:focus {
+  border-color: #2258cd;
+  box-shadow: 0 0 4px rgba(255, 185, 151, 0.6);
+  outline: none;
 }
 
-.simple-template h1 {
-  font-size: 22px;
-  text-align: left;
-  font-weight: bold;
+/* Button */
+.actions {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.simple-template p {
-  text-align: left;
-}
-
-.modern-template {
-  font-family: Arial, sans-serif;
-  width: 60%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background: #f9f9f9;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Traditional Template */
-.traditional-template {
-  font-family: Arial, sans-serif;
-  width: 60%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background: #f9f9f9;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.traditional-template h1 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.traditional-template p {
-  font-size: 14px;
-  margin: 5px 0;
-  color: #333;
-}
-
-.traditional-template h2 {
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-top: 15px;
-  color: #222;
-}
-
-.traditional-template ul {
-  padding-left: 20px;
-}
-
-.traditional-template li {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.download-btn {
-  background: #007bff;
+.actions button {
+  background: #2258cd;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.actions button:hover {
+  background: #2258cd;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 148, 104, 0.4);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* ===============================
+   🔹 TEMPLATES SELECTION
+================================== */
+.templates {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.templates h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.templates .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.templates button {
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  font-weight: 500;
+}
+
+.templates button:hover {
+  background: #0c3fad;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   🔹 RESUME PREVIEW
+================================== */
+.resume-preview-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar button {
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  display: block;
-  margin: 20px auto;
-  transition: background 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.download-btn:hover {
-  background: #0056b3;
+.toolbar button:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Resume Content */
+#resume-preview {
+  background: #fff;
+  color: #111;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.resume-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.resume h2 {
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.resume p {
+  margin-bottom: 8px;
+}
+
+/* Skill Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.chips li {
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+@media print {
+  .sidebar,
+  .toolbar,
+  .templates,
+  .form {
+    display: none !important;
+  }
+  #resume-preview {
+    box-shadow: none;
+    padding: 0;
+  }
 }
